@@ -126,8 +126,9 @@ img {
   text-decoration: none;
 }
 
-.header-nav-list-link:hover,
-.header-nav-list-link:focus {
+.header-nav-list-link[href]:hover,
+.header-nav-list-link:focus,
+.header-nav-list-link.active {
   color: var(--ocean);
 }
 
@@ -220,7 +221,9 @@ img {
 
 .our-advantages-item-icon {
   display: flex;
-  padding: 24px 100px;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
   margin-bottom: 8px;
   background-color: var(--cloud);
   border-radius: 4px;
@@ -499,12 +502,18 @@ img {
   width: calc((100% - 2 * 24px) / 3);
 }
 
-.projects-item:hover {
+.projects-link {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.projects-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.projects-item:hover .projects-list-text-content {
+.projects-link:hover .projects-list-text-content {
   border-color: var(--cloud);
 }
 
